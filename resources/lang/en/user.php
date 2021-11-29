@@ -15,6 +15,7 @@
         'sent_email'    => 'Sent to email',
         'wrang_code'    => 'Wrong Code',
         'active_success' => 'Active Successfully',
+        'uploadImageSuccess' => 'Image uploaded successfully',
     ]
 
 ?>

@@ -20,11 +20,14 @@ Route::group(['middleware' => ['api','changeLanguage'], 'namespace' => 'API'], f
     Route::post('activcode', 'AuthController@activcode');
     Route::post('rechangepass', 'AuthController@rechangepass');
 
+    //Get All Images
+    Route::get('images', 'ImageController@allImages');
 
     Route::group(['middleware' => ['auth.guard:api'],], function () {
         Route::post('logout', 'AuthController@logout');
-        Route::get('profile/{user}', 'AuthController@profile');
-        Route::post('update-profile', 'AuthController@updateProfile');
+        Route::post('save-image', 'ImageController@saveImage');
+        Route::get('images/{id}', 'ImageController@userImage');
+
     });
 
 
