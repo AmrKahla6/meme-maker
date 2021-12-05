@@ -20,11 +20,26 @@ Route::group(['middleware' => ['api','changeLanguage'], 'namespace' => 'API'], f
     Route::post('activcode', 'AuthController@activcode');
     Route::post('rechangepass', 'AuthController@rechangepass');
 
+    //Get All Images
+    Route::get('images', 'ImageController@allImages');
+    Route::get('image/{id}', 'ImageController@getImageId');
+
+    //Get All Stikers
+    Route::get('stikers', 'StikerController@allStikers');
+    Route::get('stiker/{id}', 'StikerController@getStikerId');
 
     Route::group(['middleware' => ['auth.guard:api'],], function () {
         Route::post('logout', 'AuthController@logout');
-        Route::get('profile/{user}', 'AuthController@profile');
-        Route::post('update-profile', 'AuthController@updateProfile');
+
+        // Images Routes
+        Route::post('save-image', 'ImageController@saveImage');
+        Route::get('images/{id}', 'ImageController@userImage');
+        Route::delete('images/{id}/delete', 'ImageController@deleteImage');
+
+        //Stikers Routes
+        Route::post('save-stikers', 'StikerController@saveStiker');
+        Route::get('stikers/{id}', 'StikerController@userStiker');
+        Route::delete('stikers/{id}/delete', 'StikerController@deleteStiker');
     });
 
 
