@@ -16,6 +16,7 @@
         'wrang_code'    => 'Wrong Code',
         'active_success' => 'Active Successfully',
         'uploadImageSuccess' => 'Image uploaded successfully',
+        'delimage'           => 'Deleted successfully',
     ]
 
 ?>

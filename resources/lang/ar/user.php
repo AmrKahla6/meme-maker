@@ -16,6 +16,7 @@
         'wrang_code'    => 'كود غير صحيح',
         'active_success' => 'تم التفعيل بنجاح',
         'uploadImageSuccess' => 'تمت اضافه الصوره بنجاح',
+        'delimage'           => 'تم الحذف بنجاح',
     ]
 
 ?>

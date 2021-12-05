@@ -22,6 +22,15 @@ class BaseController extends Controller
         ]);
     }
 
+    // public function returnData($msg = "")
+    // {
+    //     return response()->json([
+    //         'status' => true,
+    //         'msg' => $msg,
+    //     ]);
+    // }
+
+
     public function returnData($key, $value, $msg = "")
     {
         return response()->json([
@@ -30,6 +39,7 @@ class BaseController extends Controller
              $key => $value,
         ]);
     }
+
 
 
     public function returnSuccessMessage($msg = "", $errNum = "S000")

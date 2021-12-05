@@ -12,7 +12,7 @@ class Image extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    protected $appends = ['image_path'];
+    // protected $appends = ['image_path'];
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
@@ -21,5 +21,10 @@ class Image extends Model
     public function  getImagePathAttribute()
     {
       return asset('uploads/images/'. $this->image);
+    }// end of get Image Path
+
+    public function  getStikerPathAttribute()
+    {
+      return asset('uploads/stikers/'. $this->image);
     }// end of get Image Path
 }
